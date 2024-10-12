@@ -1,0 +1,21 @@
+services:
+  trt:
+    image: kylepaul/deeplearning:deployment
+    container_name: erf
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    volumes:
+      - /home/pc/dev/erf:/workspace
+      - /home/pc/dev/dataset/samples:/workspace/samples
+    ipc: host
+    ulimits:
+      memlock: -1
+      stack: 67108864
+    stdin_open: true
+    tty: true
+    network_mode: host

@@ -1,0 +1,153 @@
+:root {
+    --primary-color: #7437ef;
+    --secondary-color: #6c18ff;
+    --white-color: #e5e7eb;
+    --check-box-tick: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e")
+}
+
+.diffusion-spave-div h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+.finetuned-diffusion-div div {
+    display: inline-flex;
+    align-items: center;
+    gap: .8rem;
+    font-size: 1.75rem
+}
+.finetuned-diffusion-div div h1 {
+    font-weight: 900;
+    margin-bottom: 7px;
+}
+.finetuned-diffusion-div p{
+    margin-bottom: 10px;
+    font-size: 94%;
+}
+
+.tabs{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#gallery{
+    min-height: 20rem
+}
+
+.custom-button,
+.custom-button-2 {
+    height: 40px;
+    background: var(--primary-color);
+    position: relative;
+    text-align: center;
+    border-radius: 7px;
+    transition: background 0.3s;
+    font-size: 12;
+    text-decoration: none;
+}
+
+.custom-button {
+    width: 150px;
+}
+
+.custom-button:hover,
+.custom-button-2:hover {
+    background: var(--secondary-color);
+}
+
+.custom-button-2 {
+    width: 100%;
+}
+
+#prompt-space {
+    opacity: 1;
+}
+.custom-slider input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 4px;
+    background: var(--white-color);
+    accent-color: var(--primary-color);
+    background-image: linear-gradient(var(--primary-color), var(--primary-color));
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+}
+
+.custom-slider input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--white-color);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s ease;
+}
+
+.custom-slider input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+.custom-slider input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: var(--white-color);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s ease;
+}
+
+.custom-slider input[type="range"]::-moz-range-thumb:hover {
+    transform: scale(1.2);
+}
+
+.custom-slider input[type="range"]::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    background: var(--white-color);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s ease;
+}
+
+.custom-slider input[type="range"]::-ms-thumb:hover {
+    transform: scale(1.2);
+}
+
+.custom-radio-button label {
+    background: none;
+    background-color: transparent;
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out, transform 0.2s ease;
+    font-size: 14;
+    padding: 10px 15px 10px 15px;
+}
+
+.custom-radio-button span {
+    transition: font-size 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.custom-radio-button label:hover {
+    background-color: #6c18ff;
+}
+
+.custom-radio-button input[type="radio"] {
+    display: none;
+}
+
+.custom-radio-button span {
+    opacity: 0.5;
+}
+
+.custom-radio-button input[type="radio"]:checked + span {
+    opacity: 1;
+    font-weight: bolder;
+    font-size: 17;
+}
+
+.custom-checkbox input[type="checkbox"]:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    background-image: var(--check-box-tick);
+}
